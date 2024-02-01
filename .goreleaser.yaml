@@ -95,9 +95,9 @@ dockers:
     build_flag_templates:
       - --platform=linux/amd64
     image_templates:
-      - "flashbots/suave-geth:{{ .ShortCommit }}-amd64"
-      - "flashbots/suave-geth:{{ .Tag }}-amd64"
-      - "flashbots/suave-geth:latest-amd64"
+      - "0x416e746f6e/suave-geth:{{ .ShortCommit }}-amd64"
+      - "0x416e746f6e/suave-geth:{{ .Tag }}-amd64"
+      - "0x416e746f6e/suave-geth:latest-amd64"
   - dockerfile: ./Dockerfile.suave
     use: buildx
     goarch: arm64
@@ -105,23 +105,23 @@ dockers:
     build_flag_templates:
       - --platform=linux/arm64
     image_templates:
-      - "flashbots/suave-geth:{{ .ShortCommit }}-arm64"
-      - "flashbots/suave-geth:{{ .Tag }}-arm64"
-      - "flashbots/suave-geth:latest-arm64"
+      - "0x416e746f6e/suave-geth:{{ .ShortCommit }}-arm64"
+      - "0x416e746f6e/suave-geth:{{ .Tag }}-arm64"
+      - "0x416e746f6e/suave-geth:latest-arm64"
 
 docker_manifests:
-  - name_template: "flashbots/suave-geth:{{ .ShortCommit }}"
+  - name_template: "0x416e746f6e/suave-geth:{{ .ShortCommit }}"
     image_templates:
-      - "flashbots/suave-geth:{{ .ShortCommit }}-amd64"
-      - "flashbots/suave-geth:{{ .ShortCommit }}-arm64"
-  - name_template: "flashbots/suave-geth:{{ .Tag }}"
+      - "0x416e746f6e/suave-geth:{{ .ShortCommit }}-amd64"
+      - "0x416e746f6e/suave-geth:{{ .ShortCommit }}-arm64"
+  - name_template: "0x416e746f6e/suave-geth:{{ .Tag }}"
     image_templates:
-      - "flashbots/suave-geth:{{ .Tag }}-amd64"
-      - "flashbots/suave-geth:{{ .Tag }}-arm64"
-  - name_template: "flashbots/suave-geth:latest"
+      - "0x416e746f6e/suave-geth:{{ .Tag }}-amd64"
+      - "0x416e746f6e/suave-geth:{{ .Tag }}-arm64"
+  - name_template: "0x416e746f6e/suave-geth:latest"
     image_templates:
-      - "flashbots/suave-geth:latest-amd64"
-      - "flashbots/suave-geth:latest-arm64"
+      - "0x416e746f6e/suave-geth:latest-amd64"
+      - "0x416e746f6e/suave-geth:latest-arm64"
 
 checksum:
   name_template: "checksums.txt"
